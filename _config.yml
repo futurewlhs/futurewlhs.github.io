@@ -1,0 +1,9 @@
+title: "FutureWLHS"
+description: "Misinformation for the masses"
+baseurl: "" # keep empty for USERNAME.github.io root
+url: "https://futurewlhs.github.io"
+theme: null
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
