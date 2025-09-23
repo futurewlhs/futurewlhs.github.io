@@ -1,18 +1,48 @@
 ---
 layout: default
 ---
-<!-- Featured “BREAKING” bar -->
-<div class="font-bold w-full text-red-500 flex items-center justify-between mb-3">
-  <div class="flex items-center gap-2">
-    <div class="w-2 h-2 rounded-full animate-ping bg-red-500"></div>
-    <div class="w-2 h-2 rounded-full bg-red-500 absolute"></div>
-    BREAKING
-  </div>
-  <p class="text-xs font-medium">Published {{ page.date | date: "%b %-d, %Y" }}</p>
+
+{% comment %}
+Compute "is latest" and "age < 24h" for BREAKING badge
+{% endcomment %}
+{% assign latest = site.posts | first %}
+{% assign now_ts = 'now' | date: '%s' | plus: 0 %}
+{% assign post_ts = page.date | date: '%s' | plus: 0 %}
+{% assign age_sec = now_ts | minus: post_ts %}
+{% assign is_latest = page.url == latest.url %}
+{% assign is_fresh = age_sec < 86400 %}
+
+<!-- Back button -->
+<div class="w-full mb-4">
+  <a href="{{ '/' | relative_url }}" class="inline-flex items-center gap-2 text-sm text-neutral-700 hover:underline">
+    <!-- simple arrow -->
+    <span aria-hidden="true">←</span>
+    <span>Back</span>
+  </a>
 </div>
+
+<!-- BREAKING (only if latest and <24h) -->
+{% if is_latest and is_fresh %}
+  <div class="font-bold w-full text-red-500 flex items-center justify-between mb-3">
+    <div class="flex items-center gap-2">
+      <div class="w-2 h-2 rounded-full animate-ping bg-red-500"></div>
+      <div class="w-2 h-2 rounded-full bg-red-500 absolute"></div>
+      BREAKING
+    </div>
+    <p class="text-xs font-medium">
+      {% include relative_time.html date=page.date %}
+    </p>
+  </div>
+{% endif %}
 
 <article>
   <h1 class="dm-serif font-bold text-4xl py-1">{{ page.title }}</h1>
+
+  <!-- Publish time (relative) -->
+  <p class="text-xs text-neutral-500 mb-2">
+    Published {% include relative_time.html date=page.date %}
+  </p>
+
   {% if page.excerpt and page.show_excerpt_on_post %}
     <p class="py-2 text-neutral-800">{{ page.excerpt }}</p>
   {% endif %}
