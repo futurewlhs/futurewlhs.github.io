@@ -16,7 +16,7 @@ title: Home
         <div class="w-2 h-2 rounded-full bg-red-500 absolute"></div>
         LATEST
       </div>
-      <p class="text-xs font-medium">{{ featured.date | date: "%b %-d, %Y" }}</p>
+      <p class="text-xs font-medium">{% include relative_time.html date=featured.date %}</p>
     </div>
 
     <a href="{{ featured.url | relative_url }}" class="block group">
@@ -39,7 +39,7 @@ title: Home
     <article>
       <a href="{{ post.url | relative_url }}" class="block group">
         <h3 class="dm-serif font-bold text-2xl group-hover:underline">{{ post.title }}</h3>
-        <p class="text-xs text-neutral-500 mb-2">{{ post.date | date: "%b %-d, %Y" }}</p>
+        <p class="text-xs text-neutral-500 mb-2">{% include relative_time.html date=post.date %}</p>
         {% if post.excerpt %}
           <p class="text-neutral-700">{{ post.excerpt }}</p>
         {% endif %}
