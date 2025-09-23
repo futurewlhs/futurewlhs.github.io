@@ -1,17 +1,13 @@
-{% assign now_ts   = 'now' | date: '%s' | plus: 0 %}
-{% assign post_ts  = include.date | date: '%s' | plus: 0 %}
+{% assign now_ts = 'now' | date: '%s' | plus: 0 %}
+{% assign yesterday_ts = now_ts | minus: 86400 %}
 
-{% assign now_day  = 'now' | date: '%j' %}
-{% assign now_year = 'now' | date: '%Y' %}
-{% assign post_day  = include.date | date: '%j' %}
-{% assign post_year = include.date | date: '%Y' %}
+{% assign today_str = now_ts | date: "%Y-%m-%d" %}
+{% assign yday_str  = yesterday_ts | date: "%Y-%m-%d" %}
+{% assign post_str  = include.date | date: "%Y-%m-%d" %}
 
-{% assign day_diff = now_day | minus: post_day %}
-{% assign same_year = now_year == post_year %}
-
-{% if day_diff == 0 and same_year %}
+{% if post_str == today_str %}
   Today – {{ include.date | date: "%I:%M %p" }}
-{% elsif day_diff == 1 and same_year %}
+{% elsif post_str == yday_str %}
   Yesterday – {{ include.date | date: "%I:%M %p" }}
 {% else %}
   {{ include.date | date: "%b %-d, %Y – %I:%M %p" }}
