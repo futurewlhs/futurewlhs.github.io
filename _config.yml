@@ -8,3 +8,4 @@ permalink: /:categories/:year/:month/:day/:title/
 plugins:
   - jekyll-feed
 future: true
+timezone: America/Los_Angeles
