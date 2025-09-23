@@ -1,8 +1,3 @@
-{% comment %}
-Usage: {% include relative_time.html date=page.date %}
-Outputs things like: "just now", "15 mins ago", "2 hours ago", "3 days ago", else a short date.
-{% endcomment %}
-
 {% assign now_ts = 'now' | date: '%s' | plus: 0 %}
 {% assign dt_ts  = include.date | date: '%s' | plus: 0 %}
 {% assign diff   = now_ts | minus: dt_ts %}
@@ -13,8 +8,8 @@ Outputs things like: "just now", "15 mins ago", "2 hours ago", "3 days ago", els
   {% assign mins = diff | divided_by: 60 %}
   {{ mins }} min{% if mins != 1 %}s{% endif %} ago
 {% elsif diff < 86400 %}
-  {% assign hours = diff | divided_by: 3600 %}
-  {{ hours }} hour{% if hours != 1 %}s{% endif %} ago
+  {% assign hrs = diff | divided_by: 3600 %}
+  {{ hrs }} hour{% if hrs != 1 %}s{% endif %} ago
 {% elsif diff < 2592000 %}
   {% assign days = diff | divided_by: 86400 %}
   {{ days }} day{% if days != 1 %}s{% endif %} ago
