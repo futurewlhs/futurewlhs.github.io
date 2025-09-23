@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<!-- Featured “BREAKING” bar -->
+<div class="font-bold w-full text-red-500 flex items-center justify-between mb-3">
+  <div class="flex items-center gap-2">
+    <div class="w-2 h-2 rounded-full animate-ping bg-red-500"></div>
+    <div class="w-2 h-2 rounded-full bg-red-500 absolute"></div>
+    BREAKING
+  </div>
+  <p class="text-xs font-medium">Published {{ page.date | date: "%b %-d, %Y" }}</p>
+</div>
+
+<article>
+  <h1 class="dm-serif font-bold text-4xl py-1">{{ page.title }}</h1>
+  {% if page.excerpt and page.show_excerpt_on_post %}
+    <p class="py-2 text-neutral-800">{{ page.excerpt }}</p>
+  {% endif %}
+
+  {% if page.hero %}
+    <img src="{{ page.hero }}" alt="" class="my-4">
+    {% if page.hero_caption %}
+      <p class="text-xs text-neutral-950/30 mb-4">{{ page.hero_caption }}</p>
+    {% endif %}
+  {% endif %}
+
+  <div class="prose max-w-none">
+    {{ content }}
+  </div>
+</article>
