@@ -33,6 +33,8 @@ title: Home
 
 <!-- All other posts -->
 <section class="space-y-8">
+  <p class="text-xs text-neutral-500">Post count: {{ site.posts | size }}</p>
+  
   {% for post in others %}
     <article>
       <a href="{{ post.url | relative_url }}" class="block group">
