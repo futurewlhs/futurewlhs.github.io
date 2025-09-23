@@ -1,18 +1,18 @@
-{% assign now_ts = 'now' | date: '%s' | plus: 0 %}
-{% assign dt_ts  = include.date | date: '%s' | plus: 0 %}
-{% assign diff   = now_ts | minus: dt_ts %}
+{% assign now_ts   = 'now' | date: '%s' | plus: 0 %}
+{% assign post_ts  = include.date | date: '%s' | plus: 0 %}
 
-{% if diff < 60 %}
-  just now
-{% elsif diff < 3600 %}
-  {% assign mins = diff | divided_by: 60 %}
-  {{ mins }} min{% if mins != 1 %}s{% endif %} ago
-{% elsif diff < 86400 %}
-  {% assign hrs = diff | divided_by: 3600 %}
-  {{ hrs }} hour{% if hrs != 1 %}s{% endif %} ago
-{% elsif diff < 2592000 %}
-  {% assign days = diff | divided_by: 86400 %}
-  {{ days }} day{% if days != 1 %}s{% endif %} ago
+{% assign now_day  = 'now' | date: '%j' %}
+{% assign now_year = 'now' | date: '%Y' %}
+{% assign post_day  = include.date | date: '%j' %}
+{% assign post_year = include.date | date: '%Y' %}
+
+{% assign day_diff = now_day | minus: post_day %}
+{% assign same_year = now_year == post_year %}
+
+{% if day_diff == 0 and same_year %}
+  Today – {{ include.date | date: "%I:%M %p" }}
+{% elsif day_diff == 1 and same_year %}
+  Yesterday – {{ include.date | date: "%I:%M %p" }}
 {% else %}
-  {{ include.date | date: "%b %-d, %Y" }}
+  {{ include.date | date: "%b %-d, %Y – %I:%M %p" }}
 {% endif %}
