@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Open Graph (fallbacks pulled from front matter when present) -->
+  <meta property="og:title" content="{{ page.og_title | default: page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.og_description | default: site.description }}">
+  <meta property="og:image" content="{{ page.og_image | default: site.url | append: '/assets/images/og-default.png' }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="theme-color" content="#FF3B3B" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    .unifrakturcook-bold { font-family: 'UnifrakturCook', serif; font-weight: 700; }
+    .montserrat { font-family: 'Montserrat', sans-serif; }
+    .dm-serif { font-family: 'DM Serif Text', serif; }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Header -->
+  <a href="{{ '/' | relative_url }}" class="w-full h-12 border-b-2 border-neutral-950/15 flex items-center justify-center text-center text-3xl unifrakturcook-bold">
+    Future WLHS
+  </a>
+
+  <main class="w-full min-h-screen items-center flex flex-col montserrat">
+    <div class="w-full max-w-[48rem] px-6 sm:px-10 py-10">
+      {{ content }}
+      <footer class="mt-10 text-xs text-gray-400 text-center">
+        &copy; {{ "now" | date: "%Y" }} Balencienciaga Times — Drama reported with questionable restraint.
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
