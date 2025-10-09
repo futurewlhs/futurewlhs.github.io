@@ -1,11 +1,19 @@
 title: "FutureWLHS"
-description: "Misinformation for the masses"
+description: "West Linn High School's Best Misinformation Site"
 baseurl: "" # keep empty for USERNAME.github.io root
 url: "https://futurewlhs.com"
 theme: null
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title/
 plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-feed
 future: true
 timezone: America/Los_Angeles
+
+author:
+  name: Future WLHS
+logo: /assets/images/brand/logo-512.png   # square PNG for cards
+social:
+  name: FutureWLHS
