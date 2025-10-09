@@ -3,7 +3,7 @@ layout: post
 title: "BREAKING: Who the fuck is WLHS_GOONER??? 💦"
 excerpt: "Some dude is gooning all over the high school LMAO"
 hero: "/assets/images/wlhsgoonerevidence1.png"
-hero_caption: "Some dude is gooning all over the high school LMAO"
+hero_caption: "Cum on the WLHS sign outside"
 og_title: "Who the fuck is WLHS_GOONER???"
 og_description: "Some dude is gooning all over the high school LMAO"
 og_image: "/assets/images/wlhsgoonerevidence1.png"
