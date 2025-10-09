@@ -23,6 +23,10 @@
 
   {% include head-favicons.html %}
 
+  {% seo %}
+
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+
   <style>
     .unifrakturcook-bold { font-family: 'UnifrakturCook', serif; font-weight: 700; }
     .montserrat { font-family: 'Montserrat', sans-serif; }
