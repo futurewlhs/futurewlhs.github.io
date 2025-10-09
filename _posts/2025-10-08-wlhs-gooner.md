@@ -46,7 +46,7 @@ The final post as of posting this article shows the gooner cumming all over a ba
 # WLHS REVIEWS
 ### THIS IS NEW INFO THAT I DON'T THINK HAS BEEN DISCOVERED YET
 
-In videos 3 and 4, there were links to a person named [@wlhsreviews])[https://www.instagram.com/wlhsreviews] in the "In this post" tab, but appeared to be removed **while writing the article.** This is a strong case that **WLHSReviews is closely related to or** ***is*** **the WLHS gooner.***
+In videos 3 and 4, there were links to a person named [@wlhsreviews](https://www.instagram.com/wlhsreviews) in the "In this post" tab, but appeared to be removed **while writing the article.** This is a strong case that **WLHSReviews is closely related to or** ***is*** **the WLHS gooner.***
 
 <br>
 
