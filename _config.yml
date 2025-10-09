@@ -1,7 +1,7 @@
 title: "FutureWLHS"
 description: "Misinformation for the masses"
 baseurl: "" # keep empty for USERNAME.github.io root
-url: "https://futurewlhs.github.io"
+url: "https://futurewlhs.com"
 theme: null
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title/
