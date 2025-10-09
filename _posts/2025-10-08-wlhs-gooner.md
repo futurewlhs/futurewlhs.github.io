@@ -41,6 +41,7 @@ The final post as of posting this article shows the gooner cumming all over a ba
 
 [@wlhs.doakes](https://www.instagram.com/wlhs.doakes) is the main person publicly trying to find out who the WLHS gooner is. They have 2 posts, both screen recordings of WLHS_Gooner's videos with clips from Dexter: Original Sin, with text overlayed. Not much other info than this
 
+<br>
 
 # WLHS REVIEWS
 ### THIS IS NEW INFO THAT I DON'T THINK HAS BEEN DISCOVERED YET
@@ -51,10 +52,15 @@ In videos 3 and 4, there were links to a person named [@wlhsreviews])[https://ww
 
 Their latest post is from 2024, which I originally thought meant that they were now inactive. But now, looking closer, there appears to be a story under the "Vandalism" collection which was added just **7 hours before making this article**, and they are actively commenting on the WLHS gooners' posts.
 
+<br>
+
 ## This account is still active.
+
+<br>
 
 On the latest video, WLHS reviews commented, "Don't end up like West Linn News 🙏" and then WLHS gooner replied with "What happened to west linn news". **A stupid account about gooning around the high school would not make a fake conversation with themself to lead them off the trail, which means they are** ***NOT*** **the same person.**
 
+<br>
 
 This is all the info I have found out, and I will update this article if breaking information comes out.
 
