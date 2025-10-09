@@ -3,7 +3,8 @@ layout: default
 title: Home
 ---
 
-{% assign posts_sorted = site.posts | sort: 'date' | reverse %}
+{% assign visible_posts = site.posts | where_exp: "post", "post.hidden != true" %}
+{% assign posts_sorted = visible_posts | sort: 'date' | reverse %}
 {% assign featured = posts_sorted | first %}
 {% assign others = posts_sorted | slice: 1, 100 %}
 
@@ -55,4 +56,3 @@ title: Home
     </div>
   {% endfor %}
 </section>
-
