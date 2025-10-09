@@ -22,7 +22,7 @@ title: Home
     <a href="{{ featured.url | relative_url }}" class="block group">
       <h2 class="dm-serif font-bold text-4xl py-1 group-hover:underline">{{ featured.title }}</h2>
       {% if featured.hero %}
-        <img src="{{ featured.hero }}" alt="" class="my-4">
+        <img src="{{ featured.hero }}" alt="" class="my-4 w-full max-h-96 object-cover">
       {% endif %}
       {% if featured.excerpt %}
         <p class="text-neutral-700">{{ featured.excerpt }}</p>
