@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BREAKING: Who the fuck is WLHS_GOONER??? 💦"
+title: "Who the fuck is WLHS_GOONER??? 💦"
 excerpt: "Some dude is gooning all over the high school LMAO"
 hero: "/assets/images/wlhsgoonerevidence1.png"
 hero_caption: "Cum on the WLHS sign outside"
